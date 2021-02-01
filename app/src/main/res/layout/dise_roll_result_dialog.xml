@@ -1,0 +1,36 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/mainRollResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="4"
+        app:layout_constraintTop_toBottomOf="@+id/whichDiceWasRolled"
+        app:layout_constraintStart_toStartOf="@id/whichDiceWasRolled"
+        app:layout_constraintEnd_toEndOf="@id/whichDiceWasRolled"
+        android:textSize="@dimen/buttonTextSize" />
+
+    <TextView
+        android:id="@+id/whichDiceWasRolled"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginHorizontal="@dimen/buttonMarginTop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="d6"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/rollResults"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/mainRollResult"
+        app:layout_constraintStart_toStartOf="@id/whichDiceWasRolled"
+        app:layout_constraintEnd_toEndOf="@id/whichDiceWasRolled"
+        android:text="1, 3"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

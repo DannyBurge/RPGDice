@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="buttonMarginTop">32dp</dimen>
+    <dimen name="buttonTextSize">32sp</dimen>
+    <dimen name="TextSize">54sp</dimen>
+    <dimen name="buttonSize">100dp</dimen>
+</resources>

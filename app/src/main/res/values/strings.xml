@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">RPG Dice</string>
+    <string name="tabNameDices">DICES</string>
+    <string name="tabNameHistory">HISTORY</string>
+</resources>
