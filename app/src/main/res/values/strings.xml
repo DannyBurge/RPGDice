@@ -2,4 +2,6 @@
     <string name="app_name">RPG Dice</string>
     <string name="tabNameDices">DICES</string>
     <string name="tabNameHistory">HISTORY</string>
+    <string name="howMuch">%1$dd</string>
+    <string name="modifier">+%1$d</string>
 </resources>

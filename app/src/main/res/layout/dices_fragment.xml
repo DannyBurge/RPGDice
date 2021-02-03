@@ -6,112 +6,107 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <Button
-            android:id="@+id/dice4"
-            android:layout_width="@dimen/buttonSize"
-            android:layout_height="@dimen/buttonSize"
-            android:layout_marginTop="@dimen/buttonMarginTop"
-            android:text="4"
-            android:textSize="@dimen/buttonTextSize"
-            app:layout_constraintEnd_toStartOf="@+id/dice6"
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/diceList"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toTopOf="@+id/containerHowMuch"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <Button
-            android:id="@+id/dice6"
-            android:layout_width="@dimen/buttonSize"
-            android:layout_height="@dimen/buttonSize"
-            android:text="6"
-            android:textSize="@dimen/buttonTextSize"
-            app:layout_constraintBottom_toBottomOf="@+id/dice4"
-            app:layout_constraintEnd_toStartOf="@+id/dice8"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/dice4" />
-
-        <Button
-            android:id="@+id/dice8"
-            android:layout_width="@dimen/buttonSize"
-            android:layout_height="@dimen/buttonSize"
-            android:text="8"
-            android:textSize="@dimen/buttonTextSize"
-            app:layout_constraintBottom_toBottomOf="@+id/dice6"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/dice6" />
-
-        <Button
-            android:id="@+id/dice10"
-            android:layout_width="@dimen/buttonSize"
-            android:layout_height="@dimen/buttonSize"
-            android:layout_marginTop="@dimen/buttonMarginTop"
-            android:text="10"
-            android:textSize="@dimen/buttonTextSize"
-            app:layout_constraintEnd_toStartOf="@+id/dice20"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/dice4" />
-
-        <Button
-            android:id="@+id/dice20"
-            android:layout_width="@dimen/buttonSize"
-            android:layout_height="@dimen/buttonSize"
-            android:text="20"
-            android:textSize="@dimen/buttonTextSize"
-            app:layout_constraintBottom_toBottomOf="@+id/dice10"
-            app:layout_constraintEnd_toStartOf="@+id/dice100"
-            app:layout_constraintStart_toEndOf="@+id/dice10" />
-
-        <Button
-            android:id="@+id/dice100"
-            android:layout_width="@dimen/buttonSize"
-            android:layout_height="@dimen/buttonSize"
-            android:text="100"
-            android:textSize="@dimen/buttonTextSize"
-            app:layout_constraintBottom_toBottomOf="@+id/dice20"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/dice20" />
-
-        <Button
-            android:id="@+id/decrement"
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/containerHowMuch"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="-"
-            android:textSize="@dimen/buttonTextSize"
-            app:layout_constraintBottom_toBottomOf="@+id/howMuchRollTheDiceText"
-            app:layout_constraintEnd_toStartOf="@+id/howMuchRollTheDiceText"
-            app:layout_constraintHorizontal_chainStyle="packed"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/howMuchRollTheDiceText" />
-
-        <TextView
-            android:id="@+id/howMuchRollTheDiceText"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="@dimen/buttonMarginTop"
-            android:layout_marginBottom="@dimen/buttonMarginTop"
-            android:text="1"
-            android:textSize="@dimen/TextSize"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/decrement"
-            app:layout_constraintStart_toEndOf="@+id/increment" />
+            app:layout_constraintEnd_toStartOf="@+id/containerModifier"
+            app:layout_constraintStart_toStartOf="parent">
 
-        <Button
-            android:id="@+id/increment"
+            <Button
+                android:id="@+id/decrement"
+                android:layout_width="@dimen/buttonSizeSmall"
+                android:layout_height="@dimen/buttonSizeSmall"
+                android:text="-"
+                android:textSize="@dimen/buttonTextSizeSmall"
+                app:layout_constraintBottom_toBottomOf="@+id/howMuchRollTheDiceText"
+                app:layout_constraintEnd_toStartOf="@+id/howMuchRollTheDiceText"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/howMuchRollTheDiceText" />
+
+            <TextView
+                android:id="@+id/howMuchRollTheDiceText"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/marginMain"
+                android:layout_marginVertical="@dimen/marginBig"
+                android:text="100d"
+                android:textAlignment="center"
+                android:textSize="@dimen/textSizeSmall"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/increment"
+                app:layout_constraintStart_toEndOf="@+id/decrement"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/increment"
+                android:layout_width="@dimen/buttonSizeSmall"
+                android:layout_height="@dimen/buttonSizeSmall"
+                android:text="+"
+                android:textSize="@dimen/buttonTextSizeSmall"
+                app:layout_constraintBottom_toBottomOf="@+id/howMuchRollTheDiceText"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/howMuchRollTheDiceText"
+                app:layout_constraintTop_toTopOf="@+id/howMuchRollTheDiceText" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/containerModifier"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="+"
-            android:textSize="@dimen/buttonTextSize"
-            app:layout_constraintBottom_toBottomOf="@+id/howMuchRollTheDiceText"
+            app:layout_constraintBottom_toBottomOf="@+id/containerHowMuch"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/howMuchRollTheDiceText"
-            app:layout_constraintTop_toTopOf="@+id/howMuchRollTheDiceText" />
+            app:layout_constraintStart_toEndOf="@+id/containerHowMuch">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="how much roll the dice"
-            android:textSize="@dimen/buttonTextSize"
-            app:layout_constraintBottom_toTopOf="@id/howMuchRollTheDiceText"
-            app:layout_constraintEnd_toEndOf="@+id/increment"
-            app:layout_constraintStart_toStartOf="@+id/decrement" />
+            <Button
+                android:id="@+id/decrementModifier"
+                android:layout_width="@dimen/buttonSizeSmall"
+                android:layout_height="@dimen/buttonSizeSmall"
+                android:text="-"
+                android:textSize="@dimen/buttonTextSizeSmall"
+                app:layout_constraintBottom_toBottomOf="@+id/ModifierText"
+                app:layout_constraintEnd_toStartOf="@+id/ModifierText"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/ModifierText" />
 
+            <TextView
+                android:id="@+id/ModifierText"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/marginMain"
+                android:text="+100"
+                android:textAlignment="center"
+                android:layout_marginVertical="@dimen/marginBig"
+                android:textSize="@dimen/textSizeSmall"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/incrementModifier"
+                app:layout_constraintStart_toEndOf="@+id/decrementModifier"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/incrementModifier"
+                android:layout_width="@dimen/buttonSizeSmall"
+                android:layout_height="@dimen/buttonSizeSmall"
+                android:text="+"
+                android:textSize="@dimen/buttonTextSizeSmall"
+                app:layout_constraintBottom_toBottomOf="@+id/ModifierText"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/ModifierText"
+                app:layout_constraintTop_toTopOf="@+id/ModifierText" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

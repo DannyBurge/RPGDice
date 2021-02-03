@@ -1,0 +1,33 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingVertical="@dimen/marginMain">
+
+    <TextView
+        android:id="@+id/whichDiceWasRolled"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginHorizontal="@dimen/buttonMarginTop"
+        android:text="d6"
+        android:textSize="@dimen/textSize" />
+
+
+    <TextView
+        android:id="@+id/mainRollResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="4"
+        android:textSize="@dimen/textSizeBig" />
+
+    <TextView
+        android:id="@+id/rollResults"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="1, 3"
+        android:textSize="@dimen/textSizeSmall" />
+
+</LinearLayout>
